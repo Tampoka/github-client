@@ -1,3 +1,5 @@
+import {WelcomeWindow} from './WelcomeWindow';
+
 export const App = () => {
     return (
         <blessed-box
@@ -5,7 +7,7 @@ export const App = () => {
                 bg: "#0000ff"
             }}
         >
-            Hello React-Blessed
+            <WelcomeWindow/>
         </blessed-box>
     );
 };
