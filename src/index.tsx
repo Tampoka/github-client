@@ -5,6 +5,7 @@ import * as dotenv from "dotenv"
 import {App} from "./App"
 import {ErrorBoundary} from "./ErrorBoundary"
 import {MemoryRouter} from "react-router"
+import {ClientProvider} from './auth/ClientProvider';
 
 // var blessed = require('blessed');
 dotenv.config()
@@ -27,7 +28,9 @@ screen.key(["q", "C-c"], () => process.exit(0))
 const component = render(
     <ErrorBoundary>
         <MemoryRouter>
-            <App/>
+            <ClientProvider>
+                <App/>
+            </ClientProvider>
         </MemoryRouter>,
     </ErrorBoundary>,
     screen
