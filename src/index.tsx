@@ -1,12 +1,12 @@
-import React from "react"
-// import blessed from "blessed"
+// import React from "react"
+import * as blessed from "blessed"
 import {render} from "react-blessed"
 import * as dotenv from "dotenv"
-// import {App} from "./App"
-// import {ErrorBoundary} from "./ErrorBoundary"
+import {App} from "./App"
+import {ErrorBoundary} from "./ErrorBoundary"
 import {MemoryRouter} from "react-router"
 
-var blessed = require('blessed');
+// var blessed = require('blessed');
 dotenv.config()
 
 const screen = blessed.screen({
@@ -28,7 +28,7 @@ const component = render(
     <ErrorBoundary>
         <MemoryRouter>
             <App/>
-        </MemoryRouter>
+        </MemoryRouter>,
     </ErrorBoundary>,
     screen
 )
